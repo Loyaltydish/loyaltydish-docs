@@ -1,0 +1,9 @@
+site_name: LoyaltyDish
+
+theme:
+  name: material
+  logo: null
+  # favicon: images/logo.png
+
+extra_css:
+  - css/extra.css
