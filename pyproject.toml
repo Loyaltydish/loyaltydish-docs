@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "loyaltydish-docs"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+mkdocs-material = "*"
+pygments-graphql = "*"
+pygments-graphql-lexer = "*"
+pre-commit = "^2.20.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
