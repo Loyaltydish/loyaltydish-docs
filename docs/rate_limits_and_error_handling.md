@@ -8,4 +8,4 @@ Our API replies with 3 types of errors for various reasons. Each error contains 
 
 - `permission_denied`: returned when the user does not have access to the requested resources.
 - `does_not_exist`: returned when the requested resource does not exist.
-- `invalid`: returned when the request properties or a business requirement is fulfilled.
+- `invalid`: returned when the request properties or a business requirement is not fulfilled.
