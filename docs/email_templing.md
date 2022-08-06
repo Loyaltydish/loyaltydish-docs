@@ -1,4 +1,4 @@
-LoyaltyDish provides an API to create email templates based on the [Jijnja](https://jinja.palletsprojects.com/en/3.1.x/) templating language
+LoyaltyDish provides an API to create email templates based on the [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) templating language
 
 ## Create an email template
 
