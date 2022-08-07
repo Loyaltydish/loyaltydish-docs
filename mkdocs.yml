@@ -41,7 +41,9 @@ nav:
   - Roles & permissions: "roles_and_permissions.md" # ✅
   - Customer affinities: "customer_affinities.md" # ✅
   - POS:
-      - Product: ""
+      - Product: "pos/product.md"
+      - Modifier: ""
+      - Menu: ""
       - Order: ""
       - Order item: ""
       - Order status: ""
