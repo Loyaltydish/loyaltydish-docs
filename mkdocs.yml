@@ -43,10 +43,9 @@ nav:
   - POS:
       - Product: "pos/product.md"
       - Modifier: "pos/modifier.md"
-      - Menu: ""
+      - Menu: "pos/menu.md"
       - Order: ""
       - Order item: ""
-      - Order status: ""
       - Checkout: "pos/checkout.md"
       - Discount: "pos/discount.md"
       - Refund: "pos/refund.md"
