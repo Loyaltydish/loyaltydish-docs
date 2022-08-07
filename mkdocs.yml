@@ -49,7 +49,7 @@ nav:
       - Order status: ""
       - Checkout: "pos/checkout.md"
       - Discount: ""
-      - Refund: ""
+      - Refund: "pos/refund.md"
       - Terminal: ""
       - Printer: ""
       - Floor plan: ""
