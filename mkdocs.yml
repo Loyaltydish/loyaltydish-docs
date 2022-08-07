@@ -48,7 +48,7 @@ nav:
       - Order item: ""
       - Order status: ""
       - Checkout: "pos/checkout.md"
-      - Discount: ""
+      - Discount: "pos/discount.md"
       - Refund: "pos/refund.md"
       - Terminal: ""
       - Printer: ""
