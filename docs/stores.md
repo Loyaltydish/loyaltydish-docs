@@ -1,15 +1,19 @@
+Rereive information about the Merchant Stores.
+
+Store API will helps to create and manage all stores under the merchant. 
+
 ## The store node
 
 | Method                      | Type                                 | Description |
 | --------------------------- | ------------------------------------ | ----------- |
-| id                          | `ID!`                                |
+| id                          | `ID!`                                |Primary key
 | extraInfo                   | `JSONString`                         |
-| isActive                    | `Boolean!`                           |
+| isActive                    | `Boolean!`                           |whether the store is active?
 | createdAt                   | `DateTime!`                          |
 | updatedAt                   | `DateTime!`                          |
 | deletedAt                   | `DateTime`                           |
 | merchant                    | `MerchantNode`                       |
-| name                        | `String!`                            |
+| name                        | `String!`                            |Name of the store
 | location                    | `String`                             |
 | phoneNumber                 | `String!`                            |
 | country                     | `String`                             |
