@@ -1,3 +1,50 @@
+## The offer node
+
+| Method               | Type                              | Description |
+| -------------------- | --------------------------------- | ----------- |
+| id                   | `ID!`                             |
+| pk                   | `Int`                             |
+| merchant             | `UserNode`                        |
+| campaign             | `CampaignNode!`                   |
+| stores               | `StoreNodeConnection!`            |
+| storeGroups          | `StoreGroupNodeConnection!`       |
+| products             | `ProductNodeConnection!`          |
+| name                 | `String!`                         |
+| shortDescription     | `String!`                         |
+| longDescription      | `String!`                         |
+| offerType            | `OfferOfferType!`                 |
+| offerValue           | `Float!`                          |
+| numOfItems           | `Int`                             |
+| placement            | `OfferPlacement!`                 |
+| startTime            | `DateTime!`                       |
+| endTime              | `DateTime!`                       |
+| redemptionCodeType   | `OfferRedemptionCodeType!`        |
+| enrollmentLimit      | `Int!`                            |
+| repeatable           | `Boolean!`                        |
+| repeatDelayHours     | `Int`                             |
+| dayStartTime         | `Time`                            |
+| dayEndTime           | `Time`                            |
+| daysOfWeek           | `[String]`                        |
+| weather              | `String!`                         |
+| earnPoints           | `Boolean!`                        |
+| segmentationRules    | `JSONString`                      |
+| termsAndConditions   | `String`                          |
+| minimumSpendCurrency | `OfferMinimumSpendCurrency`       |
+| minimumSpend         | `String`                          |
+| code                 | `String`                          |
+| totalRating          | `Float!`                          |
+| status               | `OfferStatus!`                    |
+| refreshHours         | `Int!`                            |
+| redemptionIntents    | `RedemptionIntentNodeConnection!` |
+| redemptions          | `RedemptionNodeConnection`        |
+| pictures             | `OfferPictureNodeConnection!`     |
+| offerConsumers       | `OfferConsumerNodeConnection!`    |
+| minimumSpendAmount   | `Float`                           |
+| consumers            | `OfferConsumerNodeConnection`     |
+| extraInfo            | `JSONString`                      |
+| createdAt            | `DateTime!`                       |
+| updatedAt            | `DateTime!`                       |
+
 ## Create an offer
 
 === "Request"

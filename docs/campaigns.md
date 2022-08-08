@@ -1,3 +1,24 @@
+## The campaign node
+
+| Method       | Type                           | Description |
+| ------------ | ------------------------------ | ----------- |
+| pk           | `Int`                          |
+| id           | `ID!`                          |
+| merchant     | `UserNode`                     |
+| stores       | `StoreNodeConnection!`         |
+| storeGroups  | `StoreGroupNodeConnection!`    |
+| name         | `String!`                      |
+| start        | `DateTime!`                    |
+| end          | `DateTime!`                    |
+| status       | `CampaignStatus!`              |
+| images       | `CampaignImageNodeConnection!` |
+| offers       | `OfferNodeConnection!`         |
+| loyaltyCards | `LoyaltyCardNodeConnection!`   |
+| activities   | `ActivityNodeConnection`       |
+| extraInfo    | `JSONString`                   |
+| createdAt    | `DateTime!`                    |
+| updatedAt    | `DateTime!`                    |
+
 ## Create a campaign
 === "Request"
     ```gql

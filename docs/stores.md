@@ -1,3 +1,60 @@
+## The store node
+
+| Method                      | Type                                 | Description |
+| --------------------------- | ------------------------------------ | ----------- |
+| id                          | `ID!`                                |
+| extraInfo                   | `JSONString`                         |
+| isActive                    | `Boolean!`                           |
+| createdAt                   | `DateTime!`                          |
+| updatedAt                   | `DateTime!`                          |
+| deletedAt                   | `DateTime`                           |
+| merchant                    | `MerchantNode`                       |
+| name                        | `String!`                            |
+| location                    | `String`                             |
+| phoneNumber                 | `String!`                            |
+| country                     | `String`                             |
+| state                       | `String`                             |
+| city                        | `String`                             |
+| street                      | `String`                             |
+| zipCode                     | `String`                             |
+| taxRate                     | `Float`                              |
+| shortDescription            | `String`                             |
+| longDescription             | `String`                             |
+| color                       | `String!`                            |
+| deliveryCostPerMileCurrency | `StoreDeliveryCostPerMileCurrency`   |
+| deliveryCostPerMile         | `String`                             |
+| deliveryDistanceLimitMiles  | `Float`                              |
+| totalRating                 | `Float!`                             |
+| storeType                   | `TypeNode`                           |
+| disableOnlineOrders         | `Boolean`                            |
+| categories                  | `CategoryNodeConnection!`            |
+| logo                        | `String`                             |
+| orderPreparationTimeHours   | `Float`                              |
+| merchants                   | `IUserNodeConnection!`               |
+| groups                      | `StoreGroupNodeConnection!`          |
+| pictures                    | `StorePictureNodeConnection!`        |
+| schedules                   | `StoreAvailabilityNodeConnection!`   |
+| customDates                 | `StoreCustomDateNodeConnection!`     |
+| products                    | `ProductNodeConnection!`             |
+| productsQuantities          | `ProductQuantityNodeConnection!`     |
+| productsAvailabilities      | `ProductAvailabilityNodeConnection!` |
+| campaigns                   | `CampaignNodeConnection!`            |
+| offers                      | `OfferNodeConnection!`               |
+| loyaltyCards                | `LoyaltyCardNodeConnection!`         |
+| visits                      | `VisitNodeConnection!`               |
+| floorPlans                  | `FloorPlanNodeConnection!`           |
+| sections                    | `SectionNodeConnection!`             |
+| orders                      | `OrderNodeConnection!`               |
+| pk                          | `Int`                                |
+| address                     | `String`                             |
+| pointsEarned                | `Int`                                |
+| reviews                     | `ReviewNodeConnection`               |
+| favorites                   | `FavoriteNodeConnection`             |
+| countryDisplay              | `String`                             |
+| isOpen                      | `Boolean`                            |
+| deliveryCostPerMileAmount   | `Float`                              |
+| currentCustomDates          | `StoreCustomDateNodeConnection`      |
+
 ## Create a store
 
 === "Request"
