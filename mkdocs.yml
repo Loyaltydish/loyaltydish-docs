@@ -50,13 +50,10 @@ nav:
       - Tip: "pos/tip.md"
       - Checkout: "pos/checkout.md"
       - Refund: "pos/refund.md"
-      - Terminal: ""
-      - Printer: ""
-      - Floor plan: ""
+      - Terminal: "pos/terminal.md"
+      - Printer: "pos/printer.md"
+      - Floor plan: "pos/floor_plan.md"
   - Analytics: "analytics.md"
-
-# TODO add the base object for each page
-# TODO aff filters to queries
 
 markdown_extensions:
   - pymdownx.highlight:
