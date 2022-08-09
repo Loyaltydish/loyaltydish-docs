@@ -23,6 +23,7 @@ extra_css:
 nav:
   - Get started: "get_started.md" # TODO
   - Create an account: "create_an_account.md"
+  - Authorization: "authorization.md"
   - Authentication: "authentication.md"
   - Obtain API keys: "authorization.md"
   - Rate limits & error handling: "rate_limits_and_error_handling.md"
