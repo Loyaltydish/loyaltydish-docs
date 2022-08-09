@@ -1,6 +1,6 @@
 Create, manage and sync customers from internal and external sources (like Spotify, salesforce, etc.)
 
-The customer APIs also enable to fetch all customer-related resources like orders, promotions, loyalty point and more
+The customer APIs also enable to fetch all customer-related resources like orders, promotions, loyalty points, and more
 
 ## Customer Signup
 
@@ -20,13 +20,13 @@ Create a new customer
 Mutation to login the customer to access the system. Access token will be generated to access other resources
 
 === "Request"
-`gql mutation ( $email: String! $password: String! ){ obtainToken( email: $email password: $password ) { token refreshToken success errors } } `
+```gql mutation ( $email: String! $password: String! ){ obtainToken( email: $email password: $password ) { token refreshToken success errors } } ```
 
 === "Variables"
-`json { "email": "consumer@loyaltydish.com", "password": "XXXXXX" } `
+```json { "email": "consumer@loyaltydish.com", "password": "XXXXXX" } ```
 
 === "Response"
-`json { "data": { "signIn": { "token": "eyJ0eXSiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1lcmNoYW50M0BnbWFpbC5jb20iLCJleHAiOjE2OTUzNjQ4NzQsIm9yaWdJYXQiOjE2NTkzNjg0NzR9.9jYPs1ThFW_kiC2SeIacjOM-sQuMbdbYtyGor5X78Ug", "refreshToken": "4ce1ac944d9658c1e72999efbf497dc2a05138ac", "success": true, "errors": null } } } `
+```json { "data": { "signIn": { "token": "eyJ0eXSiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1lcmNoYW50M0BnbWFpbC5jb20iLCJleHAiOjE2OTUzNjQ4NzQsIm9yaWdJYXQiOjE2NTkzNjg0NzR9.9jYPs1ThFW_kiC2SeIacjOM-sQuMbdbYtyGor5X78Ug", "refreshToken": "4ce1ac944d9658c1e72999efbf497dc2a05138ac", "success": true, "errors": null } } } ```
 
 ## List customers
 
