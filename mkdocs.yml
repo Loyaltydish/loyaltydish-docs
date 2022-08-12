@@ -21,7 +21,7 @@ extra_css:
   - css/extra.css
 
 nav:
-  - Get started: "get_started.md" # TODO
+  - Get started: "get_started.md"
   - Create an account: "create_an_account.md"
   - Authorization: "authorization.md"
   - Authentication: "authentication.md"
@@ -33,6 +33,7 @@ nav:
   - Store groups: "store_groups.md"
   - Campaigns: "campaigns.md"
   - Offers: "offers.md"
+  - Loyalties: "loyalties.md"
   - Segment: "segment.md"
   - Workflows: "workflows.md"
   - Email templating: "email_templing.md"
