@@ -119,7 +119,7 @@
 === "Request"
     ```gql
     mutation (
-      $orderItems: [ID]!
+      $orderItems: [OrderItemRefundInput]!
     ){
       createOrderItemsRefund(
         input: {
@@ -138,7 +138,10 @@
 === "Variables"
     ```json
     {
-      "orderItems": [45, 46]
+      "orderItems": [
+        { "orderItemId": 45, "reason": "some reason" },
+        { "orderItemId": 46 }
+      ]
     }
     ```
 
