@@ -1,4 +1,4 @@
-LoyaltyDish supports 3 payment types: Credit card (Stripe), PayPal and Cash.
+LoyaltyDish supports 3 payment types: Credit card, PayPal and Cash.
 
 
 ## Checkout mutation
@@ -11,8 +11,8 @@ mutation (
   $cashReceivedCurrency: String
   $change: Decimal
   $changeCurrency: String
-  $stripePaymentMethodId: String
   $consumerPaypalEmail: String
+  $paymentGatewayParams: JSONString
 ){
   checkoutOrder(
     input: {
@@ -22,8 +22,8 @@ mutation (
       cashReceivedCurrency: $cashReceivedCurrency
       change: $change
       changeCurrency: $changeCurrency
-      stripePaymentMethodId: $stripePaymentMethodId
       consumerPaypalEmail: $consumerPaypalEmail
+      paymentGatewayParams: $paymentGatewayParams
     }
   ) {
     errors
@@ -36,29 +36,43 @@ mutation (
 ```
 
 ## Credit card checkout
+`paymentGatewayParams` depends in the payment gateway you configured for your system
+Currently, there are 3 available payment gateways: Stripe, Square, Razorpay
+```json
+// Stripe params schema
+{
+  "payment_method_id": {
+      "type": "string",
+  },
+}
+
+// Square params schema
+{
+  "source_id": {
+      "type": "string",
+  }
+}
+
+// Razorpay params schema
+{
+  "payment_id": {
+    "type": "string",
+  }
+}
+```
 
 === "Request"
     ```gql
     mutation (
       $id: ID!
       $paymentType: String!
-      $cashReceived: Decimal
-      $cashReceivedCurrency: String
-      $change: Decimal
-      $changeCurrency: String
-      $stripePaymentMethodId: String
-      $consumerPaypalEmail: String
+      $paymentGatewayParams: JSONString
     ){
       checkoutOrder(
         input: {
           id: $id
           paymentType: $paymentType
-          cashReceived: $cashReceived
-          cashReceivedCurrency: $cashReceivedCurrency
-          change: $change
-          changeCurrency: $changeCurrency
-          stripePaymentMethodId: $stripePaymentMethodId
-          consumerPaypalEmail: $consumerPaypalEmail
+          paymentGatewayParams: $paymentGatewayParams
         }
       ) {
         errors
@@ -75,7 +89,7 @@ mutation (
     {
       "id": 15,
       "paymentType": "CREDIT_CARD",
-      "stripePaymentMethodId": "pm_1LUGLo2eZvKYlo2CO9peySAz"
+      "paymentGatewayParams": "{\"payment_method_id\": \"pm_1LUGLo2eZvKYlo2CO9peySAz\""
     }
     ```
 
@@ -102,22 +116,12 @@ mutation (
     mutation (
       $id: ID!
       $paymentType: String!
-      $cashReceived: Decimal
-      $cashReceivedCurrency: String
-      $change: Decimal
-      $changeCurrency: String
-      $stripePaymentMethodId: String
       $consumerPaypalEmail: String
     ){
       checkoutOrder(
         input: {
           id: $id
           paymentType: $paymentType
-          cashReceived: $cashReceived
-          cashReceivedCurrency: $cashReceivedCurrency
-          change: $change
-          changeCurrency: $changeCurrency
-          stripePaymentMethodId: $stripePaymentMethodId
           consumerPaypalEmail: $consumerPaypalEmail
         }
       ) {
@@ -166,8 +170,6 @@ mutation (
       $cashReceivedCurrency: String
       $change: Decimal
       $changeCurrency: String
-      $stripePaymentMethodId: String
-      $consumerPaypalEmail: String
     ){
       checkoutOrder(
         input: {
@@ -177,8 +179,6 @@ mutation (
           cashReceivedCurrency: $cashReceivedCurrency
           change: $change
           changeCurrency: $changeCurrency
-          stripePaymentMethodId: $stripePaymentMethodId
-          consumerPaypalEmail: $consumerPaypalEmail
         }
       ) {
         errors
