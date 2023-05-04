@@ -5,33 +5,38 @@ LoyaltyDish provides an API to create email templates based on the [Jinja](https
 === "Request"
     ```gql
     mutation (
-      $name: String!
-      $description: String!
-      $template: JSONString
-    ){
-      createEmailTemplate(
-        input: {
-          name: $name
-          description: $description
-          template: $template
+        $name: String!
+        $description: String
+        $template: JSONString
+        $prebuiltTemplateId: ID
+    ) {
+        createEmailTemplate(input: {
+            name: $name
+            description: $description
+            template: $template
+            prebuiltTemplateId: $prebuiltTemplateId
+        }) {
+            success
+            errors
+            emailTemplate {
+                pk
+                name
+                description
+                template
+                merchant {
+                    pk
+                }
+            }
         }
-      ) {
-        success
-        errors
-        emailTemplate {
-          pk
-          id
-        }
-      }
     }
     ```
 
 === "Variables"
     ```json
     {
-      "name": "Email template 1",
-      "description": "The first email template",
-      "template": "<p>Order #{{ order.order_id }} completed successfully!</p>"
+        "name": "Email template 1",
+        "description": "The first email template",
+        "template": "{\"design\": {}}"
     }
     ```
 
@@ -55,34 +60,34 @@ LoyaltyDish provides an API to create email templates based on the [Jinja](https
 === "Request"
     ```gql
     mutation (
-      $id: ID!
-      $name: String
-      $description: String
-      $template: JSONString
-    ){
-      updateEmailTemplate(
-        input: {
-          id: $id
-          name: $name
-          description: $description
-          template: $template
+        $id: ID!
+        $name: String
+        $description: String
+        $template: JSONString
+    ) {
+        updateEmailTemplate(input: {
+            id: $id
+            name: $name
+            description: $description
+            template: $template
+        }) {
+            success
+            errors
+            emailTemplate {
+                pk
+                name
+                description
+                template
+            }
         }
-      ) {
-        success
-        errors
-        emailTemplate {
-          pk
-          id
-        }
-      }
     }
     ```
 
 === "Variables"
     ```json
     {
-      "id": 1,
-      "name": "Email template 1 - edited"
+        "id": 1,
+        "name": "Email template 1 - edited"
     }
     ```
 
@@ -107,23 +112,21 @@ LoyaltyDish provides an API to create email templates based on the [Jinja](https
 === "Request"
     ```gql
     mutation (
-      $id: ID!
-    ){
-      deleteEmailTemplate(
-        input: {
-          id: $id
+        $id: ID!
+    ) {
+        deleteEmailTemplate(input: {
+            id: $id
+        }) {
+            success
+            errors
         }
-      ) {
-        success
-        errors
-      }
     }
     ```
 
 === "Variables"
     ```json
     {
-      "id": 1
+        "id": 1
     }
     ```
 
@@ -166,3 +169,221 @@ query {
 	}
 }
 ```
+
+
+## Create an prebuilt email template
+
+```gql
+mutation (
+    $name: String!
+    $description: String
+    $template: JSONString
+    $activeFrom: DateTime!
+    $activeTo: DateTime!
+    $categoryId: ID!
+) {
+    createPrebuiltEmailTemplate(input: {
+        name: $name
+        description: $description
+        template: $template
+        activeFrom: $activeFrom
+        activeTo: $activeTo
+        categoryId: $categoryId
+    }) {
+        success
+        errors
+        prebuiltEmailTemplate {
+            pk
+            name
+            description
+            template
+            activeFrom
+            activeTo
+        }
+    }
+}
+```
+
+## Update a prebuilt email template
+
+
+```gql
+mutation (
+    $id: ID!
+    $name: String
+    $description: String
+    $template: JSONString
+    $activeFrom: DateTime
+    $activeTo: DateTime
+    $categoryId: ID
+) {
+    updatePrebuiltEmailTemplate(input: {
+        id: $id
+        name: $name
+        description: $description
+        template: $template
+        activeFrom: $activeFrom
+        activeTo: $activeTo
+        categoryId: $categoryId
+    }) {
+        success
+        errors
+        prebuiltEmailTemplate {
+            pk
+            name
+            description
+            template
+            activeFrom
+            activeTo
+        }
+    }
+}
+```
+
+
+## Delete a prebuilt email template
+
+
+```gql
+mutation (
+    $id: ID!
+) {
+    deletePrebuiltEmailTemplate(input: {
+        id: $id
+    }) {
+        success
+        errors
+    }
+}
+```
+
+## List prebuilt email templates
+
+```gql
+query ($categoryId: ID){
+    prebuiltEmailTemplates(categoryId: $categoryId) {
+        count
+        edges {
+            node {
+                pk
+                id
+            }
+        }
+    }
+}
+```
+
+## Get a single prebuilt email template
+
+```gql
+query ($id: ID!) {
+    prebuiltEmailTemplate(id: $id) {
+        id
+        pk
+        name
+        template
+        activeFrom
+        activeTo
+    }
+}
+```
+
+
+
+
+## Create an prebuilt email template category
+
+```gql
+mutation (
+    $name: String!
+    $displayName: String!
+) {
+    createPrebuiltEmailTemplateCategory(input: {
+        name: $name
+        displayName: $displayName
+    }) {
+        success
+        errors
+        category {
+            pk
+            name
+            displayName
+        }
+    }
+}
+```
+
+## Update a prebuilt email template category
+
+
+```gql
+mutation (
+    $id: ID!
+    $name: String
+    $displayName: String
+) {
+    updatePrebuiltEmailTemplateCategory(input: {
+        id: $id
+        name: $name
+        displayName: $displayName
+    }) {
+        success
+        errors
+        category {
+            pk
+            name
+            displayName
+        }
+    }
+}
+```
+
+
+## Delete a prebuilt email template
+
+
+```gql
+mutation (
+    $id: ID!
+) {
+    deletePrebuiltEmailTemplateCategory(input: {
+        id: $id
+    }) {
+        success
+        errors
+    }
+}
+```
+
+## List prebuilt email templates
+
+```gql
+query {
+    prebuiltEmailTemplateCategories {
+        count
+        edges {
+            node {
+                pk
+                id
+                name
+                displayName
+            }
+        }
+    }
+}
+```
+
+## Get a single prebuilt email template
+
+```gql
+query ($id: ID!) {
+    prebuiltEmailTemplateCategory(id: $id) {
+        id
+        pk
+        name
+        displayName
+    }
+}
+```
+
+
