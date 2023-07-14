@@ -1,4 +1,4 @@
-![Untitled](assets/Untitled.png)
+![Untitled](../assets/Untitled.png)
 
 One of the most important features on LoyaltyDish is the workflows system.
 
@@ -20,37 +20,37 @@ We will then walk through setting your first workflow live by:
 
 When selecting a trigger for your workflow, you have to choose one of three options outlined below: **Metric**, **Segment**, **Date**.
 
-![Untitled](assets/Untitled%201.png)
+![Untitled](../assets/Untitled%201.png)
 
 You select the trigger type by dragging and dropping it in the workspace.
 
 ### Metric
 
-![Untitled](assets/Untitled%202.png)
+![Untitled](../assets/Untitled%202.png)
 
 To change the event, click on the pen tool on the right, a list of available events will popup.
 
-![Untitled](assets/Untitled%203.png)
+![Untitled](../assets/Untitled%203.png)
 
 ### Segment
 
-![Untitled](assets/Untitled%204.png)
+![Untitled](../assets/Untitled%204.png)
 
 By clicking on **Filters** button, a segmentation editor will popup. Refer to [Segmentation editor](https://www.notion.so/LoyaltyDish-97a8334216a94c31971b453235c5980a) for a user guide.
 
-![Untitled](assets/Untitled%205.png)
+![Untitled](../assets/Untitled%205.png)
 
 By clicking on **Settings** button, a settings for will pop up, it allows to schedule the task by choosing a specific date or a crontab expression.
 
-![Untitled](assets/Untitled%206.png)
+![Untitled](../assets/Untitled%206.png)
 
 ### Date
 
-![Untitled](assets/Untitled%207.png)
+![Untitled](../assets/Untitled%207.png)
 
 To filters on the targeted object, click the **Filters** button. in this example the targeted object is a loyalty that allows to redeem points to a specific product.
 
-![Untitled](assets/Untitled%208.png)
+![Untitled](../assets/Untitled%208.png)
 
 ## Adding steps to a flow
 
@@ -61,10 +61,10 @@ Flow components come in 3 types:
 1. **Action:** an action component performs a specific task such as sending out a message or assigning an offer.
 2. **Flow action:** can be used to branch your flow into multiple paths based on information related to the event that triggered the flow or add time delays between actions.
 
-![Untitled](assets/Untitled%209.png)
+![Untitled](../assets/Untitled%209.png)
 
 ## Connecting steps in a flow
 
 In order to connect components, you should drag from the source’s connection point and drop on the target.
 
-![Untitled](assets/Untitled%2010.png)
+![Untitled](../assets/Untitled%2010.png)

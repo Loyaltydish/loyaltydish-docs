@@ -1,6 +1,6 @@
 # LoyaltyDish Segmentation Editor
 
-![Untitled](assets/Untitled 11.png)
+![Untitled](../assets/Untitled%2011.png)
 
 Upon creating an offer for your customers on LoyaltyDish, you often want this offer to appear to just a portion of those customers that meet certain criteria and not all of them. Our segmentation editor helps you achieve that by providing a UI to chain filters based on customer properties and behavior with logical operators (AND, OR).
 
