@@ -1,4 +1,4 @@
-site_name: Glancito
+site_name: LoyaltyDish
 
 theme:
   name: material
@@ -22,46 +22,40 @@ extra_css:
 
 nav:
   - Get started: "get_started.md"
-  - Customer Data Platform:
-      - Profiles: "profiles.md"
-      - Segments:
-          - Create a Segment: "create_a_segment.md"
-  - Campaign: "campaign.md"
-  - API Document:
-    - Create an account: "create_an_account.md"
-    - Authorization: "authorization.md"
-    - Authentication: "authentication.md"
-    - Obtain API keys: "authorization.md"
-    - Rate limits & error handling: "rate_limits_and_error_handling.md"
-    - API overview: "api_overview.md"
-    - Customers: "customers.md"
-    - Stores: "stores.md"
-    - Store groups: "store_groups.md"
-    - Campaigns: "campaigns.md"
-    - Offers: "offers.md"
-    - Loyalties: "loyalties.md"
-    - Segment: "segment.md"
-    - Workflows: "workflows.md"
-    - Email templating: "email_templing.md"
-    - Notifications: "notifications.md"
-    - 3rd party integrations: "" # TODO
-    - Merchants: "merchants.md"
-    - Roles & permissions: "roles_and_permissions.md"
-    - Customer affinities: "customer_affinities.md"
-    - POS:
-        - Product: "pos/product.md"
-        - Modifier: "pos/modifier.md"
-        - Menu: "pos/menu.md"
-        - Order: "pos/order.md"
-        - Order item: "pos/order_item.md"
-        - Discount: "pos/discount.md"
-        - Tip: "pos/tip.md"
-        - Checkout: "pos/checkout.md"
-        - Refund: "pos/refund.md"
-        - Terminal: "pos/terminal.md"
-        - Printer: "pos/printer.md"
-        - Floor plan: "pos/floor_plan.md"
-    - Analytics: "analytics.md"
+  - Create an account: "create_an_account.md"
+  - Authorization: "authorization.md"
+  - Authentication: "authentication.md"
+  - Obtain API keys: "authorization.md"
+  - Rate limits & error handling: "rate_limits_and_error_handling.md"
+  - API overview: "api_overview.md"
+  - Customers: "customers.md"
+  - Stores: "stores.md"
+  - Store groups: "store_groups.md"
+  - Campaigns: "campaigns.md"
+  - Offers: "offers.md"
+  - Loyalties: "loyalties.md"
+  - Segment: "segment.md"
+  - Workflows: "workflows.md"
+  - Email templating: "email_templing.md"
+  - Notifications: "notifications.md"
+  - 3rd party integrations: "" # TODO
+  - Merchants: "merchants.md"
+  - Roles & permissions: "roles_and_permissions.md"
+  - Customer affinities: "customer_affinities.md"
+  - POS:
+      - Product: "pos/product.md"
+      - Modifier: "pos/modifier.md"
+      - Menu: "pos/menu.md"
+      - Order: "pos/order.md"
+      - Order item: "pos/order_item.md"
+      - Discount: "pos/discount.md"
+      - Tip: "pos/tip.md"
+      - Checkout: "pos/checkout.md"
+      - Refund: "pos/refund.md"
+      - Terminal: "pos/terminal.md"
+      - Printer: "pos/printer.md"
+      - Floor plan: "pos/floor_plan.md"
+  - Analytics: "analytics.md"
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -72,5 +66,5 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 
-copyright: Copyright &copy; 2022 - 2023 Glancito
+copyright: Copyright &copy; 2021 - 2022 Loyaltydish
 
