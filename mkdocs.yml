@@ -22,6 +22,10 @@ extra_css:
 
 nav:
   - Get started: "get_started.md"
+  - Guides:
+      - Create your first campaign: "guides/create_campaign.md"
+      - Integration:
+          - Shopify Integration: "guides/integrations/shopify_integrations.md"
   - API:
     - Create an account: "create_an_account.md"
     - Authorization: "authorization.md"
