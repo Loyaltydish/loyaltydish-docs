@@ -2,9 +2,9 @@
 
 To add the Shopify integration to Glancito, follow these steps:
 
-1.	Open Glancito and click on the bottom-left Setting’s menu icon. Then go to the Integration Tab.
+1.	Login to Glancito and click on the bottom-left Setting’s menu icon. Then go to the Integration Tab.
 
-        ![Shopify Integration](../../assets/integrations/shopify-integration.png)
+      ![Shopify Integration](../../assets/integrations/shopify-integration.png)
       
 
 2.	Look for the Shopify integration and click on the Install icon next to it. If prompted, log into your Shopify account.

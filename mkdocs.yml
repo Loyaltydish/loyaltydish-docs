@@ -24,6 +24,9 @@ nav:
   - Get started: "get_started.md"
   - Guides:
       - Create your first campaign: "guides/create_campaign.md"
+      - Segment Overview : "guides/create_segments.md"
+      - Journey Overview : "guides/journey_builder.md"
+      - Subscription: "guides/subscription.md"
       - Integration:
           - Shopify Integration: "guides/integrations/shopify_integrations.md"
   - API:
