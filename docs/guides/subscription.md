@@ -32,3 +32,4 @@ Follow these steps to manage your subscription in Glancito:
 5. Once you have reviewed the information and made your selection, click on "Approve" to update and confirm your subscription. Glancito will process the changes, and you will be redirected back to the Glancito subscription page. 
 
 By following these steps, you can easily manage your Glancito subscription, customize it based on your needs, and ensure a smooth and uninterrupted experience with the platform.
+
