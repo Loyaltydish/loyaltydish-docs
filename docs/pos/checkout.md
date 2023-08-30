@@ -44,6 +44,11 @@ Currently, there are 3 available payment gateways: Stripe, Square, Razorpay
   "payment_method_id": {
       "type": "string",
   },
+  "payment_method_types": {
+      "type": "array",
+      "items": {"type": "string"},
+      "default": ["card"],
+  },
 }
 
 // Square params schema
@@ -199,6 +204,93 @@ Currently, there are 3 available payment gateways: Stripe, Square, Razorpay
       "cashReceivedCurrency": "USD",
       "change": "15.00",
       "changeCurrency": "USD"
+    }
+    ```
+
+=== "Response"
+    ```json
+    {
+        "data": {
+            "checkoutOrder": {
+                "success": true,
+                "errors": null,
+                "order": {
+                  "id": "U3RvcmVOb2RlOjE5"
+                }
+            }
+        }
+    }
+    ```
+
+
+## Terminal card reader checkout
+
+# Create Stripe reader connection token
+
+=== "Request"
+    ```gql
+    mutation {
+      stripeCreateReaderConnectionToken(input: {}){
+        success
+        errors
+        token
+      }
+    }
+    ```
+
+=== "Variables"
+    ```json
+    {}
+    ```
+
+=== "Response"
+    ```json
+    {
+        "data": {
+            "stripeCreateReaderConnectionToken": {
+                "success": true,
+                "errors": null,
+                "token": "pst_test_YWNjdF8xSElEakxJVUJ2N0xaUnlRLDF0U1BETHNNdGdncWhwNWxlRFM0Q0g4VktYS1pYZ1Y_00SE66kdOD"
+            }
+        }
+    }
+    ```
+
+
+# Complete order
+
+=== "Request"
+    ```gql
+    mutation (
+      $id: ID!
+      $paymentType: String!
+      $paymentGatewayParams: JSONString
+    ){
+      checkoutOrder(
+        input: {
+          id: $id
+          paymentType: $paymentType
+          paymentGatewayParams: $paymentGatewayParams
+        }
+      ) {
+        errors
+        success
+        order {
+          id
+        }
+      }
+    }
+    ```
+
+=== "Variables"
+    ```json
+    {
+      "id": 15,
+      "paymentType": "CREDIT_CARD",
+      "paymentGatewayParams": "{
+        \"payment_method_id\": \"pm_1LUGLo2eZvKYlo2CO9peySAz\",
+        \"payment_method_types\": \[\"card_present\"\]
+      }"
     }
     ```
 
