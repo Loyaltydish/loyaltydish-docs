@@ -19,6 +19,7 @@
     mutation (
       $sectionId: ID!
       $name: String!
+      $stripeLocationId: String
     ){
       createTerminal(
         input: {
@@ -30,6 +31,7 @@
         success
         terminal {
           id
+          stripeLocationId
         }
       }
     }
