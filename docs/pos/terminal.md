@@ -26,6 +26,7 @@
         input: {
           sectionId: $sectionId
           name: $name
+          stripeLocationId: $stripeLocationId
         }
       ) {
         errors
