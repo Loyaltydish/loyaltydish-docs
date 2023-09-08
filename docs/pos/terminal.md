@@ -6,6 +6,7 @@
 | pk        | `Int`                    |
 | section   | `SectionNode!`           |
 | name      | `String!`                |
+| stripeLocationId | `String`          |
 | key       | `String!`                |
 | printers  | `PrinterNodeConnection!` |
 | extraInfo | `JSONString`             |
