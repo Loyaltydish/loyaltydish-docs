@@ -229,8 +229,10 @@ Currently, there are 3 available payment gateways: Stripe, Square, Razorpay
 
 === "Request"
     ```gql
-    mutation {
-      stripeCreateReaderConnectionToken(input: {}){
+    mutation ($stripeLocationId: String){
+      stripeCreateReaderConnectionToken(input: {
+        stripeLocationId: $stripeLocationId
+      }){
         success
         errors
         token
@@ -288,8 +290,7 @@ Currently, there are 3 available payment gateways: Stripe, Square, Razorpay
       "id": 15,
       "paymentType": "CREDIT_CARD",
       "paymentGatewayParams": "{
-        \"payment_method_id\": \"pm_1LUGLo2eZvKYlo2CO9peySAz\",
-        \"payment_method_types\": \[\"card_present\"\]
+        \"payment_method_id\": \"pm_1LUGLo2eZvKYlo2CO9peySAz\"
       }"
     }
     ```
