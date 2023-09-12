@@ -10,6 +10,9 @@
 | ipAddress             | `String`                 |
 | macAddress            | `String`                 |
 | port                  | `Int!`                   |
+| serialNumber          | `String`                 |
+| registrationCode      | `String`                 |
+| stripeReader          | `JSONString`             |
 | connectionTypeDisplay | `String`                 |
 | extraInfo             | `JSONString`             |
 | createdAt             | `DateTime!`              |
@@ -28,6 +31,8 @@
       $macAddress: String
       $ipAddress: String
       $port: Int!
+      $serialNumber: String
+      $registrationCode: String
     ){
       createPrinter(
         input: {
@@ -37,6 +42,8 @@
           macAddress: $macAddress
           ipAddress: $ipAddress
           port: $port
+          serialNumber: $serialNumber
+          registrationCode: $registrationCode
         }
       ) {
         errors
@@ -87,6 +94,7 @@
       $macAddress: String
       $ipAddress: String
       $port: Int
+      $serialNumber: String
     ){
       updatePrinter(
         input: {
@@ -97,6 +105,7 @@
           macAddress: $macAddress
           ipAddress: $ipAddress
           port: $port
+          serialNumber: $serialNumber
         }
       ) {
         errors

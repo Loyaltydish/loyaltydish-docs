@@ -6,7 +6,6 @@
 | pk        | `Int`                    |
 | section   | `SectionNode!`           |
 | name      | `String!`                |
-| stripeLocationId | `String`          |
 | key       | `String!`                |
 | printers  | `PrinterNodeConnection!` |
 | extraInfo | `JSONString`             |
@@ -26,14 +25,12 @@
         input: {
           sectionId: $sectionId
           name: $name
-          stripeLocationId: $stripeLocationId
         }
       ) {
         errors
         success
         terminal {
           id
-          stripeLocationId
         }
       }
     }

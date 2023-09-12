@@ -10,6 +10,7 @@
 | name              | `String!`                        |
 | costCurrency      | `SectionCostCurrency`            |
 | cost              | `String`                         |
+| stripeLocationId  | `String`                         |
 | productCategories | `ProductCategoryNodeConnection!` |
 | tables            | `TableNodeConnection!`           |
 | terminals         | `TerminalNodeConnection!`        |
