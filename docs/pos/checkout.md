@@ -309,3 +309,43 @@ Currently, there are 3 available payment gateways: Stripe, Square, Razorpay
         }
     }
     ```
+
+# Send order receipt
+
+=== "Request"
+    ```gql
+    mutation SendOrderReceipt(
+        $orderId: String!, 
+        $customerEmail: String, 
+        $customerPhoneNumber: String
+    ) {
+        sendOrderReceipt(input: {
+            orderId: $orderId
+            customerEmail: $customerEmail
+            customerPhoneNumber: $customerPhoneNumber
+        }) {
+            errors
+            success
+        }
+    }
+    ```
+
+=== "Variables"
+    ```json
+    {
+      "orderId": "123083118",
+      "customerEmail": "customer@email.com"
+    }
+    ```
+
+=== "Response"
+    ```json
+    {
+        "data": {
+            "sendOrderReceipt": {
+                "errors": null,
+                "success": true
+            }
+        }
+    }
+    ```
