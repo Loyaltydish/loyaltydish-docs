@@ -60,6 +60,7 @@ nav:
         - Tip: "pos/tip.md"
         - Checkout: "pos/checkout.md"
         - Refund: "pos/refund.md"
+        - Receipt: "pos/receipt.md"
         - Terminal: "pos/terminal.md"
         - Printer: "pos/printer.md"
         - Floor plan: "pos/floor_plan.md"
