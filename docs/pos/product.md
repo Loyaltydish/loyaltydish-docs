@@ -21,6 +21,7 @@
 | storeGroups           | `StoreGroupNodeConnection!`             |
 | allStores             | `StoreNodeConnection `                  |
 | modifiersGroups       | `ProductComponentsGroupNodeConnection ` |
+| appliedTaxes          | `AppliedTaxNodeConnection`              |
 | extraInfo             | `JSONString `                           |
 | createdAt             | `DateTime!`                             |
 | updatedAt             | `DateTime!`                             |
@@ -604,3 +605,25 @@
         }
     }
     ```
+
+
+## List product taxes
+
+```gql
+query ($id: ID!){
+	product(id: $id) {
+		appliedTaxes {
+			edges {
+				node {
+					taxRate {
+						name
+						taxType
+						valueType
+						valueAmount
+					}
+				}
+			}
+		}
+	}
+}
+```
