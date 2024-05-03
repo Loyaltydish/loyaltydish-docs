@@ -95,3 +95,68 @@
         }
     }
     ```
+
+
+## Verify discount code
+
+### Input
+
+| Field            | Type                             | Description |
+| ---------------- | -------------------------------- | ----------- |
+| code             | `String!`                        | Discount code
+| subtotal         | `Decimal!`                       | Order subtotal 
+| items            | `[VerifyDiscountCodeItemsInput]` | List of `productId` and `quantity`
+| storeId          | `ID!`                            | Store id
+| consumerId       | `ID`                             | Not required, used when calling the API as a merchant
+
+
+### Mutation
+
+=== "Request"
+    ```gql
+    mutation (
+      $code: String!
+      $subtotal: Decimal!
+      $items: [VerifyDiscountCodeItemsInput]
+      $storeId: ID!
+      $consumerId: ID
+    ){
+      verifyDiscountCode(input: {
+        code : $code,
+        subtotal: $subtotal,
+        items: $items,
+        storeId: $storeId,
+        consumerId: $consumerId
+        
+      }) {
+        success
+        errors
+      }
+    }
+    ```
+
+=== "Variables"
+    ```json
+    {
+      "code" : "CCEHX9ZF",
+      "subtotal": "10.00",
+      "items": [{
+        "productId": 12,
+        "quantity": 2
+      }],
+      "storeId": 9,
+      "consumerId": 3
+    }
+    ```
+
+=== "Response"
+    ```json
+    {
+        "data": {
+            "verifyDiscountCode": {
+                "success": true,
+                "errors": null
+            }
+        }
+    }
+ 
