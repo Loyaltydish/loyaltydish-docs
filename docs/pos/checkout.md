@@ -43,12 +43,7 @@ Currently, there are 3 available payment gateways: Stripe, Square, Razorpay
 {
   "payment_method_id": {
       "type": "string",
-  },
-  "payment_method_types": {
-      "type": "array",
-      "items": {"type": "string"},
-      "default": ["card"],
-  },
+  }
 }
 
 // Square params schema
