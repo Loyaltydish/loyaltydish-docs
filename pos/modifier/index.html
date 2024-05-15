@@ -1,0 +1,1849 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Modifier - Glancito</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-modifier-node" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Glancito" class="md-header__button md-logo" aria-label="Glancito" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Glancito
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modifier
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Glancito" class="md-nav__button md-logo" aria-label="Glancito" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Glancito
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get_started/" class="md-nav__link">
+        Get started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/create_campaign/" class="md-nav__link">
+        Create your first campaign
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/create_segments/" class="md-nav__link">
+        Segment Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/journey_builder/" class="md-nav__link">
+        Journey Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/subscription/" class="md-nav__link">
+        Subscription
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          Integration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Integration" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Integration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/integrations/shopify_integrations/" class="md-nav__link">
+        Shopify Integration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create_an_account/" class="md-nav__link">
+        Create an account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../authorization/" class="md-nav__link">
+        Authorization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../authentication/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../authorization/" class="md-nav__link">
+        Obtain API keys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rate_limits_and_error_handling/" class="md-nav__link">
+        Rate limits & error handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_overview/" class="md-nav__link">
+        API overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customers/" class="md-nav__link">
+        Customers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stores/" class="md-nav__link">
+        Stores
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../store_groups/" class="md-nav__link">
+        Store groups
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../campaigns/" class="md-nav__link">
+        Campaigns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../offers/" class="md-nav__link">
+        Offers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loyalties/" class="md-nav__link">
+        Loyalties
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../segment/" class="md-nav__link">
+        Segment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/" class="md-nav__link">
+        Workflows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../email_templing/" class="md-nav__link">
+        Email templating
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notifications/" class="md-nav__link">
+        Notifications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        3rd party integrations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../merchants/" class="md-nav__link">
+        Merchants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles_and_permissions/" class="md-nav__link">
+        Roles & permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customer_affinities/" class="md-nav__link">
+        Customer affinities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_21" type="checkbox" id="__nav_3_21" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_21">
+          POS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="POS" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_21">
+          <span class="md-nav__icon md-icon"></span>
+          POS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../product/" class="md-nav__link">
+        Product
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Modifier
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Modifier
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-modifier-node" class="md-nav__link">
+    The modifier node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-modifier" class="md-nav__link">
+    Create a modifier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-a-modifier" class="md-nav__link">
+    Update a modifier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-a-modifier" class="md-nav__link">
+    Delete a modifier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-modifier-picture" class="md-nav__link">
+    Create a modifier picture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-a-modifier-picture" class="md-nav__link">
+    Update a modifier picture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-a-modifier-picture" class="md-nav__link">
+    Delete a modifier picture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-modifier-group-node" class="md-nav__link">
+    the modifier group node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-modifier-group" class="md-nav__link">
+    Create a modifier group
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-a-modifier-group" class="md-nav__link">
+    Update a modifier group
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-a-modifier-group" class="md-nav__link">
+    Delete a modifier group
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../menu/" class="md-nav__link">
+        Menu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../order/" class="md-nav__link">
+        Order
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../order_item/" class="md-nav__link">
+        Order item
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../discount/" class="md-nav__link">
+        Discount
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tip/" class="md-nav__link">
+        Tip
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checkout/" class="md-nav__link">
+        Checkout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../refund/" class="md-nav__link">
+        Refund
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../receipt/" class="md-nav__link">
+        Receipt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminal/" class="md-nav__link">
+        Terminal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../printer/" class="md-nav__link">
+        Printer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../floor_plan/" class="md-nav__link">
+        Floor plan
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/" class="md-nav__link">
+        Analytics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-modifier-node" class="md-nav__link">
+    The modifier node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-modifier" class="md-nav__link">
+    Create a modifier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-a-modifier" class="md-nav__link">
+    Update a modifier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-a-modifier" class="md-nav__link">
+    Delete a modifier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-modifier-picture" class="md-nav__link">
+    Create a modifier picture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-a-modifier-picture" class="md-nav__link">
+    Update a modifier picture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-a-modifier-picture" class="md-nav__link">
+    Delete a modifier picture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-modifier-group-node" class="md-nav__link">
+    the modifier group node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-modifier-group" class="md-nav__link">
+    Create a modifier group
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-a-modifier-group" class="md-nav__link">
+    Update a modifier group
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-a-modifier-group" class="md-nav__link">
+    Delete a modifier group
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>Modifier</h1>
+
+<h2 id="the-modifier-node">The modifier node</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><code>ID!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>pk</td>
+<td><code>Int</code></td>
+<td></td>
+</tr>
+<tr>
+<td>merchant</td>
+<td><code>MerchntNode!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td><code>String!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>shortDescription</td>
+<td><code>String!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>description</td>
+<td><code>String!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>pictures</td>
+<td><code>ProductComponentPictureNodeConection!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>price</td>
+<td><code>String</code></td>
+<td></td>
+</tr>
+<tr>
+<td>priceCurrency</td>
+<td><code>ProductComponentPriceCrrency!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>priceAmount</td>
+<td><code>Float</code></td>
+<td></td>
+</tr>
+<tr>
+<td>outOfStock</td>
+<td><code>Boolean!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>order</td>
+<td><code>Int!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>groups</td>
+<td><code>ProductComponentsGroupNodeConection!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>orderItemsComponents</td>
+<td><code>OrderItemComponentNodeConection!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>extraInfo</td>
+<td><code>JSOString</code></td>
+<td></td>
+</tr>
+<tr>
+<td>createdAt</td>
+<td><code>DateTime!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>updatedAt</td>
+<td><code>DateTime!</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="create-a-modifier">Create a modifier</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Request</label><label for="__tabbed_1_2">Variables</label><label for="__tabbed_1_3">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mutation (
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  $name: String!
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  $price: Decimal!
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  $priceCurrency: String
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  $outOfStock: Boolean
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  $shortDescription: String!
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  $description: String!
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  $order: Int!
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  $groups: [ID]!
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>){
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  createProductComponent(
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    input: {
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>      name: $name
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>      price: $price
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>      priceCurrency: $priceCurrency
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>      outOfStock: $outOfStock
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      shortDescription: $shortDescription
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>      description: $description
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>      order: $order
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>      groups: $groups
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    }
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>  ) {
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    errors
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    success
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    modifier {
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>      id
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    }
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>  }
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>}
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cheese&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.00&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">&quot;priceCurrency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USD&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">&quot;outOfStock&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">&quot;shortDescription&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cheese description&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cheese long description&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">&quot;order&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nt">&quot;picture&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="nt">&quot;groups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="nt">&quot;createProductComponent&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">            </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">            </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">            </span><span class="nt">&quot;modifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">              </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;U3RvcmVOb2RlOjE5&quot;</span><span class="w"></span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="update-a-modifier">Update a modifier</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Request</label><label for="__tabbed_2_2">Variables</label><label for="__tabbed_2_3">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mutation (
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  $id: ID!
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  $name: String
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  $price: Decimal
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  $priceCurrency: String
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  $outOfStock: Boolean
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  $shortDescription: String
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  $description: String
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  $order: Int
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  $groups: [ID]
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>){
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  updateProductComponent(
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    input: {
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>      id: $id
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>      name: $name
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>      price: $price
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>      priceCurrency: $priceCurrency
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>      outOfStock: $outOfStock
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>      shortDescription: $shortDescription
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>      description: $description
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>      order: $order
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>      groups: $groups
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    }
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>  ) {
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    errors
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    success
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>    modifier {
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>      id
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>    }
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>  }
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>}
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cheese - edited&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.00&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="nt">&quot;priceCurrency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USD&quot;</span><span class="w"></span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="nt">&quot;updateProductComponent&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">            </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">            </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">            </span><span class="nt">&quot;modifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">              </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;U3RvcmVOb2RlOjE5&quot;</span><span class="w"></span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="delete-a-modifier">Delete a modifier</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Request</label><label for="__tabbed_3_2">Variables</label><label for="__tabbed_3_3">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mutation (
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  $id: ID!
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>){
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  deleteProductComponent(
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    input: {
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>      id: $id
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    }
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>  ) {
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    errors
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    success
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    modifier {
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>      id
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>    }
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>  }
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>}
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">        </span><span class="nt">&quot;deleteProductComponent&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">            </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">            </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="create-a-modifier-picture">Create a modifier picture</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Request</label><label for="__tabbed_4_2">Variables</label><label for="__tabbed_4_3">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>mutation (
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  $productComponentId: ID!
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  $picture: Upload!
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  $order: Int!
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>){
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>  createProductComponentPicture(
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    input: {
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>      productComponentId: $productComponentId
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>      picture: $picture
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>      order: $order
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    }
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>  ) {
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    errors
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    success
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>    productComponentPicture {
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>      id
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>    }
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>  }
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>}
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nt">&quot;productComponentId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nt">&quot;picture&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="nt">&quot;order&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">        </span><span class="nt">&quot;createProductComponentPicture&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">            </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">            </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">            </span><span class="nt">&quot;productComponentPicture&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">              </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;U3RvcmVOb2RlOjE5&quot;</span><span class="w"></span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="update-a-modifier-picture">Update a modifier picture</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Request</label><label for="__tabbed_5_2">Variables</label><label for="__tabbed_5_3">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>mutation (
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>  $id: ID!
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>  $picture: Upload
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>  $order: Int
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>){
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>  updateProductComponentPicture(
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    input: {
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>      id: $id
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>      picture: $picture
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>      order: $order
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>    }
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>  ) {
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>    errors
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>    success
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>    productComponentPicture {
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>      id
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>    }
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>  }
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>}
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span><span class="nt">&quot;picture&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="nt">&quot;order&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">        </span><span class="nt">&quot;updateProductComponentPicture&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">            </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">            </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">            </span><span class="nt">&quot;productComponentPicture&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">              </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;U3RvcmVOb2RlOjE5&quot;</span><span class="w"></span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="delete-a-modifier-picture">Delete a modifier picture</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Request</label><label for="__tabbed_6_2">Variables</label><label for="__tabbed_6_3">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>mutation (
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>  $id: ID!
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>){
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>  deleteProductComponentPicture(
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    input: {
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>      id: $id
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>    }
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>  ) {
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>    errors
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>    success
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>  }
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>}
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w"></span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">        </span><span class="nt">&quot;deleteProductComponentPicture&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">            </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">            </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="the-modifier-group-node">the modifier group node</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><code>ID!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>extraInfo</td>
+<td><code>JSONString</code></td>
+<td></td>
+</tr>
+<tr>
+<td>isActive</td>
+<td><code>Boolean!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>createdAt</td>
+<td><code>DateTime!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>updatedAt</td>
+<td><code>DateTime!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>deletedAt</td>
+<td><code>DateTime</code></td>
+<td></td>
+</tr>
+<tr>
+<td>merchant</td>
+<td><code>MerchantNode!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>components</td>
+<td><code>ProductComponentNodeConnection!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td><code>String!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>description</td>
+<td><code>String!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>isRequired</td>
+<td><code>Boolean!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>maxNumOfComponents</td>
+<td><code>Int!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>minNumOfComponents</td>
+<td><code>Int!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>products</td>
+<td><code>ProductNodeConnection!</code></td>
+<td></td>
+</tr>
+<tr>
+<td>pk</td>
+<td><code>Int</code></td>
+<td></td>
+</tr>
+<tr>
+<td>modifiers</td>
+<td><code>ProductComponentNodeConnection</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="create-a-modifier-group">Create a modifier group</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Request</label><label for="__tabbed_7_2">Variables</label><label for="__tabbed_7_3">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>mutation (
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>  $name: String!
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>  $description: String!
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>  $isRequired: Boolean
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>  $maxNumOfComponents: Int!
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>  $minNumOfComponents: Int!
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>  $components: [ID]
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>  $products: [ID]
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>  $extraInfo: JSONString
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>){
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>  createProductComponentsGroup(
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>    input: {
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>      name: $name
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>      description: $description
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>      isRequired: $isRequired
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>      maxNumOfComponents: $maxNumOfComponents
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>      minNumOfComponents: $minNumOfComponents
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>      components: $components
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>      products: $products
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>      extraInfo: $extraInfo
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a>    }
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>  ) {
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a>    errors
+<a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a>    success
+<a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a>    modifiersGroup {
+<a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a>      id
+<a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a>    }
+<a id="__codelineno-18-28" name="__codelineno-18-28" href="#__codelineno-18-28"></a>  }
+<a id="__codelineno-18-29" name="__codelineno-18-29" href="#__codelineno-18-29"></a>}
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Toppings&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Your toppings&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">  </span><span class="nt">&quot;isRequired&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">  </span><span class="nt">&quot;maxNumOfComponents&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">  </span><span class="nt">&quot;minNumOfComponents&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">  </span><span class="nt">&quot;components&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">  </span><span class="nt">&quot;products&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">  </span><span class="nt">&quot;extraInfo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{}&quot;</span><span class="w"></span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">        </span><span class="nt">&quot;createProductComponentsGroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">            </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">            </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">            </span><span class="nt">&quot;productComponentsGroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">              </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;U3RvcmVOb2RlOjE5&quot;</span><span class="w"></span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="update-a-modifier-group">Update a modifier group</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Request</label><label for="__tabbed_8_2">Variables</label><label for="__tabbed_8_3">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>mutation (
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>  $id: ID!
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>  $name: String
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>  $description: String
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>  $isRequired: Boolean
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>  $maxNumOfComponents: Int
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>  $minNumOfComponents: Int
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>){
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>  updateProductComponentsGroup(
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>    input: {
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>      id: $id
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>      name: $name
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>      description: $description
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>      isRequired: $isRequired
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>      maxNumOfComponents: $maxNumOfComponents
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>      minNumOfComponents: $minNumOfComponents
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>    }
+<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>  ) {
+<a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>    errors
+<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>    success
+<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>    modifiersGroup {
+<a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>      id
+<a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>    }
+<a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a>  }
+<a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a>}
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Toppings - edited&quot;</span><span class="w"></span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">        </span><span class="nt">&quot;updateProductComponentsGroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">            </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">            </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">            </span><span class="nt">&quot;productComponentsGroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">              </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;U3RvcmVOb2RlOjE5&quot;</span><span class="w"></span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="delete-a-modifier-group">Delete a modifier group</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Request</label><label for="__tabbed_9_2">Variables</label><label for="__tabbed_9_3">Response</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>mutation (
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>  $id: ID!
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>){
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>  deleteProductComponentsGroup(
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>    input: {
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>      id: $id
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>    }
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>  ) {
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>    errors
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>    success
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>  }
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>}
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">        </span><span class="nt">&quot;deleteProductComponentsGroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="w">            </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="w">            </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../product/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Product" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Product
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../menu/" class="md-footer__link md-footer__link--next" aria-label="Next: Menu" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Menu
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 - 2023 Glancito
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>
