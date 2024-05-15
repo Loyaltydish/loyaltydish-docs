@@ -142,6 +142,7 @@
       "subtotal": "10.00",
       "items": [{
         "productId": 12,
+        "components_ids": [1, 2, 3],
         "quantity": 2
       }],
       "storeId": 9,
